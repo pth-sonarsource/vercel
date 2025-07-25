@@ -5,6 +5,9 @@ on:
       - main
   pull_request:
     types: [opened, synchronize, reopened]
+  # Trigger at 4:00 AM UTC on weekdays (Monday-Friday)
+  schedule:
+    - cron: '0 4 * * 1-5'
 jobs:
   sonarqube:
     name: SonarQube
