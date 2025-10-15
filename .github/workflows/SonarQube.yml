@@ -20,7 +20,7 @@ jobs:
         uses: SonarSource/sonarqube-scan-action@v6
         with: 
           args: >
-            -DprojectName="quality-architecture-js-validation"
+            "-Dsonar.projectName=quality-architecture-js-validation"
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_ARCHITECTURE_EXPORT_GRAPHS: true
